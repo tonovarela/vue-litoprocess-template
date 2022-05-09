@@ -351,6 +351,7 @@ import EventBus from './AppEventBus';
 				return this.$primevue.config.ripple;
 			},
 			inputStyle() {
+
 				return this.$appState.inputStyle;
 			}
 		}

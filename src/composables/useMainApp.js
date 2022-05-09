@@ -3,6 +3,16 @@ import { ref } from "vue";
 export const useMainApp = () => {
     const menu = [
         {
+          label:'Clientes',
+          items:[
+              {
+                  label: "Registros",
+                  icon: "pi pi-fw pi-home",
+                  to: "/clientes",
+              }
+          ]
+        },
+        {
             label: "Home",
             items: [
                 {

@@ -27,14 +27,8 @@ import AppTopBar from "./shared/AppTopbar.vue";
 import AppMenu from "./shared/AppMenu.vue";
  import AppConfig from './AppConfig.vue';
 import AppFooter from "./shared/AppFooter.vue";
-
 import useMainApp from "@/composables/useMainApp.js";
-
 import { useGeneralStore } from '@/store/General'
-
-
-
-
 export default {
   emits: ["change-theme"],
   setup() {
@@ -168,4 +162,5 @@ export default {
 
 <style lang="scss">
 @import "./App.scss";
+
 </style>

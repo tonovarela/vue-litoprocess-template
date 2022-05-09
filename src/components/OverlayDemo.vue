@@ -168,7 +168,7 @@
 					target: event.currentTarget,
 					message: 'Are you sure you want to proceed?',
 					icon: 'pi pi-exclamation-triangle',
-					accept: () => {
+					accept: () => {						
 						this.$toast.add({severity:'info', summary:'Confirmed', detail:'You have accepted', life: 3000});
 					},
 					reject: () => {

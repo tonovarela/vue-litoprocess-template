@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import App from './App.vue';
 
-const routes = [
+const
+    routes = [
     {
         path: '/',
         name: 'app',
@@ -11,6 +12,11 @@ const routes = [
                 path: '',
                 name: 'dashboard',
                 component: () => import('./components/Dashboard.vue')
+            },
+            {
+                path: '/clientes',
+                name: 'clientes',
+                component: () => import('./components/Clientes.vue')
             },
             {
                 path: '/formlayout',

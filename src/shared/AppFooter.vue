@@ -1,24 +1,16 @@
 <template>
 	<div class="layout-footer">
-		<img alt="Logo" :src="footerImage()" height="20" class="mr-2" />
-		by
-		<span class="font-medium ml-2">PrimeVue</span>
+		<img alt="Logo" :src="storeGeneral.getLogo" height="20" class="mr-2" />
 	</div>
 </template>
-
 <script>
-	export default {
-		name: "AppFooter",
-		methods: {
-			footerImage() {
-				
-				return this.$appState.darkTheme ? 'images/logo-white.svg' : 'images/logo-dark.svg';
-			}
-		},
-		computed: {
-			darkTheme() {
-				return this.$appState.darkTheme;
-			}
-		}
+	import {useGeneralStore} from "@/store/General";
+  export default {
+    setup(){
+      const storeGeneral = useGeneralStore();
+      return {
+        storeGeneral
+      }
+    }
 	}
 </script>

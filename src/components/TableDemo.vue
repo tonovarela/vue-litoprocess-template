@@ -311,8 +311,9 @@
 			this.productService = new ProductService();
 			this.initFilters1();
 		},
-		mounted() {
-			this.productService.getProductsWithOrdersSmall().then(data => this.products = data);
+		async mounted() {
+      this.products= await this.productService.getProductsWithOrdersSmall();
+			//this.productService.getProductsWithOrdersSmall().then(data => this.products = data);
 			this.customerService.getCustomersLarge().then(data => {
 				this.customer1 = data; 
 				this.loading1 = false;
