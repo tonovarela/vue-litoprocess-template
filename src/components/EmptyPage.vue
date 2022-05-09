@@ -3,14 +3,23 @@
 		<div class="col-12">
 			<div class="card">
 				<h5>Empty Page</h5>
-				<p>Use this page to start from scratch and place your custom content.</p>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import {useGeneralStore} from "@/store/General";
+
 export default {
+	setup(){
+		const store = useGeneralStore();
+
+    return  {
+      store
+    }
+		
+	}
 
 }
 </script>

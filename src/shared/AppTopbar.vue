@@ -1,8 +1,7 @@
 <template>
 	<div class="layout-topbar">
 		<router-link to="/" class="layout-topbar-logo">
-			<img alt="Logo" :src="topbarImage()" />
-			<span>SAKAI</span>
+			<img alt="Logo" :src="store.getLogo" />
 		</router-link>
 		<button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle">
 			<i class="pi pi-bars"></i>
@@ -37,7 +36,16 @@
 </template>
 
 <script>
+import {useGeneralStore} from "@/store/General";
+
 export default {
+  setup(){
+    const store = useGeneralStore();
+    return {
+      store
+    }
+
+  },
     methods: {
         onMenuToggle(event) {
             this.$emit('menu-toggle', event);

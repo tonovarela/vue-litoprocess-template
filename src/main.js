@@ -96,6 +96,7 @@ import TriStateCheckbox from 'primevue/tristatecheckbox';
 
 import CodeHighlight from './AppCodeHighlight';
 import BlockViewer from './BlockViewer';
+import { createPinia } from 'pinia';
 
 router.beforeEach(function(to, from, next) {
     window.scrollTo(0, 0);
@@ -198,4 +199,5 @@ app.component('TriStateCheckbox', TriStateCheckbox);
 
 app.component('BlockViewer', BlockViewer);
 
+app.use(createPinia());
 app.mount('#app');

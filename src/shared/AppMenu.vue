@@ -1,14 +1,11 @@
 <template>
 	<div class="layout-menu-container">
 		<AppSubmenu :items="model" class="layout-menu" :root="true" @menuitem-click="onMenuItemClick" @keydown="onKeyDown" />
-		<a href="https://www.primefaces.org/primeblocks-vue" class="block mt-3">
-			<img alt="primeblocks" :src="bannerImage()" class="w-full" />
-		</a>
 	</div>
 </template>
 
 <script>
-import AppSubmenu from './AppSubmenu';
+import AppSubmenu from "@/shared/AppSubmenu";
 
 export default {
 	props: {
@@ -25,9 +22,6 @@ export default {
 				event.preventDefault();
 			}
 		},
-		bannerImage() {
-			return this.$appState.darkTheme ? 'images/banner-primeblocks-dark.png' : 'images/banner-primeblocks.png';
-		}
     },
 	computed: {
 		darkTheme() {
